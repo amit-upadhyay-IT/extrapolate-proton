@@ -1,0 +1,208 @@
+{
+  "questions_list" : [
+    {
+      "id": 1,
+      "question": "Given a number 'z' and an array 'a', find list of pairs (x, y), such that x + y = z",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_pairs_sum_z_01.go",
+          "notes": "Brute force approach, for each element p1 search for z-p1 in array"
+        },
+        {
+          "id": 2,
+          "sol_address": "array_pairs_sum_z_02.go",
+          "notes": " * find all possible pairs from an array, whose sum is equal to given input in the program\n * in the last solution, we were assuming one element as the first pair and then we were searching for the\n * second element by iterating over the array.\n * We can make our search operation faster, either by sorting the array or by using a map.\n * let's see at the solution where we will sort the array.\n * Solution time complexity: O(nlogn) for sorting and O(logn) for searching, i.e. overall it will be O(nlogn)"
+        },
+        {
+          "id": 3,
+          "sol_address": "array_pairs_sum_z_03.go",
+          "notes": "some other notes"
+        },
+        {
+          "id": 4,
+          "sol_address": "array_pairs_sum_z_04.go"
+        }
+      ],
+      "sample_input": {
+        "array": [1,2,3,4,5,6,7,8,9,0],
+        "number": 5
+      }
+    },
+    {
+      "id": 2,
+      "question": "Get the maximum different between two elements in an array such that larger element appears after smaller element.",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_max_diff_two_elements_larger_after_smaller_01.go",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "array_max_diff_two_elements_larger_after_smaller_02.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [4, 3, 10, 2, 9, 1, 6],
+        "number": -9999
+      }
+    },
+    {
+      "id": 3,
+      "question": "Sort an array using quick sort method",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_quicksort_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [7, 12, 9, 3, 8, 16, 10],
+        "number": -9999
+      }
+    },
+    {
+      "id": 4,
+      "question": "Find minimum and maximum from an array using minimum number of comparision.",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_min_max_element_01.go",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "array_min_max_element_02.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [4, 7, 5, 1, 3],
+        "number": -9999
+      }
+    },
+    {
+      "id": 5,
+      "question": "Sort an array using merge sort method",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_mergesort_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [7, 12, 9, 3, 8, 16, 10],
+        "number": -9999
+      }
+    },
+    {
+      "id": 6,
+      "question": "Given an array A, find two elements whose sum is closest to zero.",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_pair_sum_close_zero_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [15, 5, -20, 30, -45],
+        "number": -9999
+      }
+    },
+    {
+      "id": 7,
+      "question": "Find the number occurring odd number of times in an array given that exactly one number occur odd number of times",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_odd_occurring_element_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [5, 7, 2, 7, 5, 2, 5],
+        "number": -9999
+      }
+    },
+    {
+      "id": 8,
+      "question": "Separate 0's and 1's in an array",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_sep_zero_one_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1],
+        "number": -9999
+      }
+    },
+    {
+      "id": 9,
+      "question": "Given a sorted array of size n, find an element that occur more than n/2 times?",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_sorted_element_count_more_nby2_01.go",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "array_sorted_element_count_more_nby2_02.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [3, 6, 7, 7, 7, 7, 7, 13],
+        "number": -9999
+      }
+    },
+    {
+      "id": 10,
+      "question": "Given an array of size n, find an element that occurs more than n/2 times?",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [5, 12, 7, 4, 12, 12, 5, 12, 12, 12, 2, 12],
+        "number": -9999
+      }
+    },
+    {
+      "id": 11,
+      "question": "Given an array of size n and a number k, find all elements that appear more than n/k times?",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [3, 1, 2, 2, 1, 2, 3, 3],
+        "number": -9999
+      }
+    }
+  ]
+}
