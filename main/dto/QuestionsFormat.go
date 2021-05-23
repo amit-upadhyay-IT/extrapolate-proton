@@ -11,8 +11,9 @@ type Solution struct {
 }
 
 type SampleInput struct {
-	Array  []int `json:"array"`
-	Number int   `json:"number"`
+	Array   []int `json:"array"`
+	Number  int   `json:"number"`
+	Number2 int   `json:"number2"`
 }
 
 type QuestionAnswerBody struct {

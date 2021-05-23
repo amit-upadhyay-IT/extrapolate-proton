@@ -170,12 +170,12 @@
       "solutions_list": [
         {
           "id": 1,
-          "sol_address": "",
+          "sol_address": "array_find_element_occur_more_nby2_unsorted_01.go",
           "notes": ""
         },
         {
           "id": 2,
-          "sol_address": "",
+          "sol_address": "array_find_element_occur_more_nby2_unsorted_02.go",
           "notes": ""
         }
       ],
@@ -190,17 +190,102 @@
       "solutions_list": [
         {
           "id": 1,
-          "sol_address": "",
+          "sol_address": "array_find_element_occur_more_nbyk_unsorted_01.go",
           "notes": ""
         },
         {
           "id": 2,
-          "sol_address": "",
+          "sol_address": "array_find_element_occur_more_nbyk_unsorted_02.go",
+          "notes": ""
+        },
+        {
+          "id": 3,
+          "sol_address": "array_find_element_occur_more_nbyk_unsorted_03.go",
           "notes": ""
         }
       ],
       "sample_input": {
-        "array": [3, 1, 2, 2, 1, 2, 3, 3],
+        "array": [3, 1, 2, 2, 2, 1, 4, 3, 3],
+        "number": 4
+      }
+    },
+    {
+      "id": 12,
+      "question": "Given an array A, find three elements such that their sum is equal to x",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_triplets_for_sum_x_01.go",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "array_triplets_for_sum_x_02.go",
+          "notes": ""
+        },
+        {
+          "id": 3,
+          "sol_address": "array_triplets_for_sum_x_03.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [12, 3, 4, 1, 6, 9],
+        "number": 24
+      }
+    },
+    {
+      "id": 13,
+      "question": "Find the smallest positive number missing from an unsorted array",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_smallest_positive_missing_number_01.go",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "array_smallest_positive_missing_number_02.go",
+          "notes": ""
+        },
+        {
+          "id": 3,
+          "sol_address": "array_smallest_positive_missing_number_03.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [2, 3, -7, 6, 8, 1, -10, 15],
+        "number": -9999
+      }
+    },
+    {
+      "id": 14,
+      "question": "Given an input array where each element represent marks of students in a class, distribute minimum number of gold coins such that children with higher mark get more coins than their neighbors, also each student should get at-least one coin.",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_distribute_minimum_coin_in_student_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [1,2,3,1,0],
+        "number": -9999
+      }
+    },
+    {
+      "id": 15,
+      "question": "Find the smallest natural number not present in a set which is formed by sums of each subset of an input array.",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "array_smallest_natural_no_not_present_in_sum_set_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [1,2,3,1,0],
         "number": -9999
       }
     }

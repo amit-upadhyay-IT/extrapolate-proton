@@ -14,6 +14,7 @@ func main() {
 
 	questionResources := resources.GetQuestionResource()
 	router.HandleFunc("/array/questions", questionResources.ViewArrayQuestions)
+	router.HandleFunc("/recursion/questions", questionResources.ViewRecursionQuestions)
 
 	fmt.Println("starting server")
 	err := http.ListenAndServe(":8081", router)

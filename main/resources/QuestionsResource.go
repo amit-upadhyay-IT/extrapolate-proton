@@ -27,4 +27,9 @@ func (questionsRes *QuestionsResource)ViewArrayQuestions(w http.ResponseWriter, 
 
 }
 
+func (questionsRes *QuestionsResource)ViewRecursionQuestions(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "%s",  questionsRes.questionService.RecursionQuestions())
+
+}
+
 

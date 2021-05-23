@@ -1,0 +1,46 @@
+{
+  "questions_list" : [
+    {
+      "id": 1,
+      "question": "Write a recursive function to find the yth power of a number x",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "recursion_power_function_01.go",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "recursion_power_function_02.go",
+          "notes": ""
+        },
+        {
+          "id": 3,
+          "sol_address": "recursion_power_function_03.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "number": 5,
+        "number2": 4
+      }
+    },
+    {
+      "id": 2,
+      "question": "Tower of Hanoi: count number of moves required to move a stack of discs from one peg to another.",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "recursion_tower_of_hanoi_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "number": 3,
+        "number2": -9999
+      }
+    }
+  ]
+}
