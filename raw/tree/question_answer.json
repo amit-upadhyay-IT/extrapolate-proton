@@ -1,0 +1,162 @@
+{
+  "questions_list" : [
+    {
+      "id": 1,
+      "question": "Basic Tree Details",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "tree_basics.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": -9999,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 2,
+      "question": "Count binary tree possible with N nodes",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "tree_count_of_binary_trees_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": 5,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 3,
+      "question": "Count number of nodes in a binary tree",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "tree_count_no_of_nodes_in_binary_tree_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": -0,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 4,
+      "question": "Count number of leaf nodes in a binary tree",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "tree_count_no_of_leaf_nodes_in_binary_tree_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": -0,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 5,
+      "question": "Count number of non-leaf nodes in a binary tree",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "tree_count_no_of_nonleaf_nodes_in_binary_tree_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": -0,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 6,
+      "question": "Count number of full nodes in a binary tree",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "tree_count_no_of_full_nodes_in_binary_tree_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": -0,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 7,
+      "question": "Count height of a binary tree",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "tree_count_height_binary_tree_01.go",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "tree_count_height_binary_tree_02.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": -0,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 8,
+      "question": "Binary Search Tree Basics",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "tree_binary_search_tree_basics.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": -0,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 9,
+      "question": "Check if  binary tree is Binary Search Tree or not",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "tree_verify_if_bst_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": -0,
+        "number2": -9999
+      }
+    }
+  ]
+}

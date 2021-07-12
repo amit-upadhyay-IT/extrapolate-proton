@@ -29,7 +29,27 @@ func (questionsRes *QuestionsResource)ViewArrayQuestions(w http.ResponseWriter, 
 
 func (questionsRes *QuestionsResource)ViewRecursionQuestions(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "%s",  questionsRes.questionService.RecursionQuestions())
-
 }
 
+func (questionsRes *QuestionsResource)ViewDynamicProgrammingQuestions(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "%s",  questionsRes.questionService.DynamicProgrammingQuestions())
+}
+
+
+func (questionsRes *QuestionsResource)ViewTreeQuestions(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "%s",  questionsRes.questionService.TreeQuestions())
+}
+
+func (questionsRes *QuestionsResource)ViewDesignPatternQuestions(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "%s",  questionsRes.questionService.DesignPatternQuestions())
+}
+
+
+func (questionsRes *QuestionsResource)ViewSystemDesignQuestions(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "%s",  questionsRes.questionService.SystemDesignQuestions())
+}
+
+func (questionsRes *QuestionsResource)ViewGraphQuestions(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "%s",  questionsRes.questionService.GraphQuestions())
+}
 

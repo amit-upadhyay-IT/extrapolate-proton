@@ -41,6 +41,70 @@
         "number": 3,
         "number2": -9999
       }
+    },
+    {
+      "id": 3,
+      "question": "Write a method that accepts an integer number and print all binary numbers that have exactly that many digits",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "recursion_print_binary_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "number": 3,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 4,
+      "question": "Write a method that accepts an integer number and print all decimal numbers that have exactly that many digits",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "recursion_print_decimal_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "number": 3,
+        "number2": -9999
+      }
+    },
+    {
+      "id": 5,
+      "question": "Write a function with 2 inputs, 1) number of dice to roll, 2) desired sum of all die values. Output combination of all die values whose sum is in input",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "recursion_die_combination_sum_01.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "number": 3,
+        "number2": 5
+      }
+    },
+    {
+      "id": 6,
+      "question": "Escape from maze",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "number": 3,
+        "number2": 5
+      }
     }
   ]
 }

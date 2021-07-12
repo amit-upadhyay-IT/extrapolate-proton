@@ -1,0 +1,31 @@
+{
+  "questions_list" : [
+    {
+      "id": 1,
+      "question": "Knapsack 0-1",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "dynamic_knapsack01_01.go",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "dynamic_knapsack01_02.go",
+          "notes": ""
+        },
+        {
+          "id": 3,
+          "sol_address": "dynamic_knapsack01_03.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": [1, 2, 3, 5],
+        "array2": [1, 6, 10, 16],
+        "number": 7,
+        "number2": -9999
+      }
+    }
+  ]
+}

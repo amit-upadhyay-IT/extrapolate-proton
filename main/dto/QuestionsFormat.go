@@ -12,6 +12,7 @@ type Solution struct {
 
 type SampleInput struct {
 	Array   []int `json:"array"`
+	Array2  []int `json:"array2"`
 	Number  int   `json:"number"`
 	Number2 int   `json:"number2"`
 }

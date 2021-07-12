@@ -1,0 +1,21 @@
+{
+  "questions_list" : [
+    {
+      "id": 1,
+      "question": "Write Consistent Hashing code",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "system_design_consistent_hashing.go",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": 0,
+        "number2": -9999
+      }
+    }
+  ]
+}

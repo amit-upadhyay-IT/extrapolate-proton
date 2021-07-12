@@ -1,0 +1,31 @@
+{
+  "questions_list" : [
+    {
+      "id": 1,
+      "question": "Creational Design Pattern",
+      "solutions_list": [
+        {
+          "id": 1,
+          "sol_address": "creational_design_pattern.go",
+          "notes": ""
+        },
+        {
+          "id": 2,
+          "sol_address": "",
+          "notes": ""
+        },
+        {
+          "id": 3,
+          "sol_address": "",
+          "notes": ""
+        }
+      ],
+      "sample_input": {
+        "array": null,
+        "array2": null,
+        "number": -9999,
+        "number2": -9999
+      }
+    }
+  ]
+}

@@ -2,6 +2,9 @@ package services
 
 import (
 	"../../sols"
+	"../../sols/graph"
+	"../../sols/system_design"
+	"../../sols/tree"
 	"../dto"
 	"../utils"
 	"encoding/json"
@@ -32,7 +35,7 @@ func (quesServ *QuestionsService) ArrayQuestions() string {
 		log.Fatal(err)
 	}
 
-	return formQuestionAnswerBody(quesAnsContenet)
+	return formQuestionAnswerBody(quesAnsContenet, "sols", true)
 
 }
 
@@ -46,11 +49,72 @@ func (quesServ *QuestionsService) RecursionQuestions() string {
 		log.Fatal(err)
 	}
 
-	return formQuestionAnswerBody(quesAnsContenet)
+	return formQuestionAnswerBody(quesAnsContenet, "sols", true)
+}
+
+func (quesServ *QuestionsService) DynamicProgrammingQuestions() string {
+	// reading the questions and answers json
+	contents, _ := ioutil.ReadFile("./raw/dynamic_programming/question_answer.json")
+	var quesAnsContenet dto.QuestionAnswer
+	err := json.Unmarshal(contents, &quesAnsContenet)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return formQuestionAnswerBody(quesAnsContenet, "sols", true)
+}
+
+func (quesServ *QuestionsService) TreeQuestions() string {
+	// reading the questions and answers json
+	contents, _ := ioutil.ReadFile("./raw/tree/question_answer.json")
+	var quesAnsContenet dto.QuestionAnswer
+	err := json.Unmarshal(contents, &quesAnsContenet)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return formQuestionAnswerBody(quesAnsContenet, "sols/tree", true)
+}
+
+func (quesServ *QuestionsService) SystemDesignQuestions() string {
+	// reading the questions and answers json
+	contents, _ := ioutil.ReadFile("./raw/system_design/question_answer.json")
+	var quesAnsContenet dto.QuestionAnswer
+	err := json.Unmarshal(contents, &quesAnsContenet)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return formQuestionAnswerBody(quesAnsContenet, "sols/system_design", true)
+}
+
+func (quesServ *QuestionsService) GraphQuestions() string {
+	// reading the questions and answers json
+	contents, _ := ioutil.ReadFile("./raw/graph/question_answer.json")
+	var quesAnsContenet dto.QuestionAnswer
+	err := json.Unmarshal(contents, &quesAnsContenet)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return formQuestionAnswerBody(quesAnsContenet, "sols/graph", true)
+}
+
+func (quesServ *QuestionsService) DesignPatternQuestions() string {
+	// reading the questions and answers json
+	contents, _ := ioutil.ReadFile("./raw/design_patterns/question_answer.json")
+	var quesAnsContenet dto.QuestionAnswer
+	err := json.Unmarshal(contents, &quesAnsContenet)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return formQuestionAnswerBody(quesAnsContenet, "sols_design", false)
 }
 
 
-func formQuestionAnswerBody(quesAnsContenet dto.QuestionAnswer) string {
+
+func formQuestionAnswerBody(quesAnsContenet dto.QuestionAnswer, dirName string, isCodeDisplay bool) string {
 
 	var pageContent string
 	for _, quesBody := range quesAnsContenet.QuesAnsList {
@@ -64,7 +128,7 @@ func formQuestionAnswerBody(quesAnsContenet dto.QuestionAnswer) string {
 			if solFileName == "" {
 				continue
 			}
-			solCode, err := ioutil.ReadFile("./sols/"+solFileName)
+			solCode, err := ioutil.ReadFile("./"+dirName+"/"+solFileName)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -72,11 +136,21 @@ func formQuestionAnswerBody(quesAnsContenet dto.QuestionAnswer) string {
 
 			answerContent += utils.NoteBox(utils.GetNoteSegment(string(solCode)))
 
-			answerContent += utils.CollapsibleWithoutPadding("Code", utils.CodeFormattingWithBoundary(utils.RemoveNoteSegmentFromCode(string(solCode))), true)
+			if isCodeDisplay {
+				answerContent += utils.CollapsibleWithoutPadding("Code", utils.CodeFormattingWithBoundary(utils.RemoveNoteSegmentFromCode(string(solCode))), true)
+			}
 
 			if quesBody.SampleInp.Array != nil || quesBody.SampleInp.Number != -9999 {
 				answerContent += utils.Collapsible("Sample Input: ", utils.CodeFormatting(getSampleInput(quesBody.SampleInp)), true)
-				answerContent += utils.Collapsible("Output: ", utils.CodeFormatting(executeProgramUsingName(solFileName, quesBody.SampleInp.Array, quesBody.SampleInp.Number, quesBody.SampleInp.Number2)), true)
+				answerContent += utils.Collapsible(
+					"Output: ", utils.CodeFormatting(
+						executeProgramUsingName(
+							solFileName,
+							quesBody.SampleInp.Array,
+							quesBody.SampleInp.Array2,
+							quesBody.SampleInp.Number,
+							quesBody.SampleInp.Number2)),
+							true)
 				answerContent += utils.NormalBreak()
 			}
 			completeQuestionContent += utils.Collapsible("Solution " + strconv.Itoa(solBody.Id), answerContent, false)
@@ -120,7 +194,7 @@ func getSampleInput(sampleInp dto.SampleInput) string {
 }
 
 
-func executeProgramUsingName(progName string, intArrayInp []int, intNumInp int, intNumInp2 int) interface{} {
+func executeProgramUsingName(progName string, intArrayInp, intArrayInp2 []int, intNumInp int, intNumInp2 int) interface{} {
 	switch progName {
 	case "array_pairs_sum_z_01.go":
 		return sols.Array_pairs_sum_z_01(intArrayInp, intNumInp)
@@ -224,6 +298,48 @@ func executeProgramUsingName(progName string, intArrayInp []int, intNumInp int, 
 	case "recursion_tower_of_hanoi_01.go":
 		return sols.Recursion_tower_of_hanoi_01(intNumInp)
 
+	case "recursion_print_binary_01.go":
+		return sols.Recursion_print_binary_01(intNumInp)
+	case "recursion_print_decimal_01.go":
+		return sols.Recursion_print_decimal_01(intNumInp)
+	case "recursion_die_combination_sum_01.go":
+		return sols.Recursion_die_combination_sum_01(intNumInp, intNumInp2)
+
+
+
+	case "dynamic_knapsack01_01.go":
+		return sols.Dynamic_knapsack01_01(intArrayInp, intArrayInp2, intNumInp)
+	case "dynamic_knapsack01_02.go":
+		return sols.Dynamic_knapsack01_02(intArrayInp, intArrayInp2, intNumInp)
+	case "dynamic_knapsack01_03.go":
+		return sols.Dynamic_knapsack01_03(intArrayInp, intArrayInp2, intNumInp)
+
+
+	case "tree_count_of_binary_trees_01.go":
+		return tree.Tree_count_of_binary_trees_01(intNumInp)
+	case "tree_count_no_of_nodes_in_binary_tree_01.go":
+		return tree.Tree_count_no_of_nodes_in_binary_tree_01()
+	case "tree_count_no_of_leaf_nodes_in_binary_tree_01.go":
+		return tree.Tree_count_no_of_leaf_nodes_in_binary_tree_01()
+	case "tree_count_no_of_nonleaf_nodes_in_binary_tree_01.go":
+		return tree.Tree_count_no_of_nonleaf_nodes_in_binary_tree_01()
+	case "tree_count_no_of_full_nodes_in_binary_tree_01.go":
+		return tree.Tree_count_no_of_full_nodes_in_binary_tree_01()
+	case "tree_count_height_binary_tree_01.go":
+		return tree.Tree_count_height_binary_tree_01()
+	case "tree_count_height_binary_tree_02.go":
+		return tree.Tree_count_height_binary_tree_02()
+	case "tree_binary_search_tree_basics.go":
+		return tree.Tree_binary_search_tree_basics()
+	case "tree_verify_if_bst_01.go":
+		return tree.Tree_verify_if_bst_01()
+
+
+	case "system_design_consistent_hashing.go":
+		return system_design.System_design_consistent_hashing()
+
+	case "graph_basics.go":
+		return graph.Graph_basics()
 	default:
 		return ""
 	}
